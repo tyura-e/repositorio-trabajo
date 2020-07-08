@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1em;
+    background-color: rgb(145, 245, 158);
+    font-family: 'Courgette', cursive;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+@keyframes imagen-rotacion {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cambio-color {
+    0% {
+        background-color: rgb(51, 12, 122);
+    }
+
+    75% {
+        background-color: rgb(143, 11, 121);
+    }
+
+    100% {
+        background-color: rgb(0, 255, 255);
+    }
+
+}
+
+@keyframes llegar {
+
+    from {
+        margin-left: 100%;
+        opacity: 0;
+
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+        opacity: 1;
+    }
+
+}
+
+.main-header {
+    display: flex;
+    background-color: rgb(18, 180, 32);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+.icono {
+    display: block;
+    width: 70px;
+    padding: 10px;
+
+    animation-name: imagen-rotacion;
+    animation-duration: 4s;
+}
+
+
+
+.navbar {
+
+    color: white;
+    background-color: rgb(18, 180, 32);
+    height: 60px;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.link-menu {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    padding: 1em;
+}
+
+.link-menu:hover {
+    background-color: rgb(27, 128, 35);
+}
+
+.active {
+    font-weight: bold;
+}
+
+.main-content {}
+
+.box-content {
+    background-color: rgb(39, 39, 39);
+    width: 100%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 15px;
+    box-shadow: 2px 3px 4px rgb(44, 43, 43);
+
+    animation: cambio-color 5s 4,
+        llegar 5s ease-in;
+
+}
+
+.text {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.main-footer {
+    background-color: rgb(18, 180, 32);
+}
